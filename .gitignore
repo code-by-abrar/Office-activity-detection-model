@@ -1,0 +1,70 @@
+# ==============================
+# Python Ignore Rules
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+*.spec
+
+# ==============================
+# Virtual Environment
+# ==============================
+venv/
+env/
+ENV/
+.venv/
+env.bak/
+
+
+# ==============================
+# YOLO / DeepSORT Files
+# ==============================
+runs/
+datasets/
+*.cache
+*.pt  # model weights (optional, keep local)
+*.onnx
+*.engine
+*.tensor
+*.tflite
+*.zip
+*.tar
+*.gz
+
+# ==============================
+# Jupyter / Notebook Files
+# ==============================
+.ipynb_checkpoints/
+*.ipynb
+
+# ==============================
+# IDE and Editor Settings
+# ==============================
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# ==============================
+# System Files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Temporary / Misc
+# ==============================
+*.tmp
+*.bak
+*.swp
+*.temp
