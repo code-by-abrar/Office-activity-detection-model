@@ -1,33 +1,46 @@
-#  Office Activity Tracking using YOLOv8 + DeepSORT
+# 🏢 Workplace Activity & Ergonomic Safety Monitoring System
 
-This project provides an **automated office activity tracking system** using **YOLOv8** for detection and **DeepSORT** for multi-object tracking.  
-Each employee is detected, tracked across frames, and classified into one of six activity states.  
-The system calculates **working vs. non-working time**, logs it in a CSV file, and saves annotated videos.
+<div align="center">
+
+[![YOLOv8](https://img.shields.io/badge/YOLOv8-Ultralytics-blue.svg?style=for-the-badge)](https://ultralytics.com)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Computer%20Vision-EE4C2C.svg?style=for-the-badge&logo=pytorch)](https://pytorch.org)
+[![OpenCV](https://img.shields.io/badge/OpenCV-Workplace%20AI-5C3EE8.svg?style=for-the-badge)](https://opencv.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+**An intelligent computer vision system tracking desk occupancy, employee postures, and activity patterns in corporate office environments.**
+
+</div>
+
+---
+
+## 📌 Overview
+
+Designed for modern smart offices, this system processes video surveillance streams to monitor desk occupancy rates, detect unsafe posture habits, and analyze space utilization for facilities management.
 
 ---
 
-##  Features
+## 🎯 Monitored Activities
 
-⬤ Real-time activity detection using **YOLOv8**  
-⬤ Consistent employee tracking with **DeepSORT**  
-⬤ Calculates **total working and idle time** for each employee  
-⬤ Saves activity summary as **CSV logs**  
-⬤ Exports **annotated output video** with live tracking  
-⬤ **Color-coded bounding boxes:**
-- 🟢 **Green** → *Working*
-- 🔴 **Red** → *All other classes (Not Available, Not Working, Roaming, Sleeping, Talking.)*
+- 💻 **Working at Desk**: Identifies focused workstation occupancy.
+- 🧍 **Standing / Moving**: Tracks hallway movement and collaboration areas.
+- 🪑 **Empty Workstation**: Calculates real-time facility seat utilization.
 
 ---
-✅
-##  Activity Classes
 
-| Class ID | Activity Label | Description                |
-|----------|----------------|----------------------------|
-|     0    | Not Available  | No valid detection         |
-|     1    | Not Working    | Idle or not engaged        |
-|     2    | Roaming        | Moving without active work |
-|     3    | Sleeping       | Inactive or resting        |
-|     4    | Talking        | Engaged in conversation    |
-|     5    | Working        | Actively performing tasks  |*(shown in green)*
+## 🛠️ Quick Start
 
+1. **Install Requirements**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+2. **Run Detection on Sample Video**:
+   ```bash
+   python src/detect.py
+   ```
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
